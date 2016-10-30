@@ -476,6 +476,18 @@ final class DerelictImguiLoader : SharedLibLoader
             bindFunc(cast(void**)&ImGuiListClipper_Begin, "ImGuiListClipper_Begin");
             bindFunc(cast(void**)&ImGuiListClipper_End, "ImGuiListClipper_End");
             bindFunc(cast(void**)&ImGuiListClipper_Step, "ImGuiListClipper_Step");
+
+            {
+                bindFunc(cast(void**)&igBeginDockspace, "igBeginDockspace");
+                bindFunc(cast(void**)&igEndDockspace, "igEndDockspace");
+                bindFunc(cast(void**)&igShutdownDock, "igShutdownDock");
+                bindFunc(cast(void**)&igSetNextDock, "igSetNextDock");
+                bindFunc(cast(void**)&igBeginDock, "igBeginDock");
+                bindFunc(cast(void**)&igEndDock, "igEndDock");
+                bindFunc(cast(void**)&igSetDockActive, "igSetDockActive");
+                bindFunc(cast(void**)&igDockDebugWindow, "igDockDebugWindow");
+            }
+
         }
     }
 

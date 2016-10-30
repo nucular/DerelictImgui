@@ -461,6 +461,19 @@ extern(C) @nogc nothrow
     alias da_ImGuiListClipper_Step = bool function(ImGuiListClipper* clipper);
 }
 
+// imgui_dock
+extern(C) @nogc nothrow
+{
+    alias da_igBeginDockspace = void function();
+    alias da_igEndDockspace = void function();
+    alias da_igShutdownDock = void function();
+    alias da_igSetNextDock = void function(ImGuiDockSlot slot);
+    alias da_igBeginDock = bool function(const char* label, bool* opened = null, ImGuiWindowFlags extra_flags = 0);
+    alias da_igEndDock = void function();
+    alias da_igSetDockActive = void function();
+    alias da_igDockDebugWindow = void function();
+}
+
 __gshared
 {
     da_igGetIO igGetIO;
@@ -875,4 +888,16 @@ __gshared
     da_ImGuiListClipper_Begin ImGuiListClipper_Begin;
     da_ImGuiListClipper_End ImGuiListClipper_End;
     da_ImGuiListClipper_Step ImGuiListClipper_Step;
+}
+
+__gshared
+{
+    da_igBeginDockspace igBeginDockspace;
+    da_igEndDockspace igEndDockspace;
+    da_igShutdownDock igShutdownDock;
+    da_igSetNextDock igSetNextDock;
+    da_igBeginDock igBeginDock;
+    da_igEndDock igEndDock;
+    da_igSetDockActive igSetDockActive;
+    da_igDockDebugWindow igDockDebugWindow;
 }

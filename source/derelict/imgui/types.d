@@ -235,6 +235,18 @@ enum
 	ImGuiMouseCursor_Count_
 }
 
+enum
+{
+    ImGuiDockSlot_Left,
+    ImGuiDockSlot_Right,
+    ImGuiDockSlot_Top,
+    ImGuiDockSlot_Bottom,
+    ImGuiDockSlot_Tab,
+
+    ImGuiDockSlot_Float,
+    ImGuiDockSlot_None
+}
+
 align(1) struct ImVec2
 {
 	float x=0;
@@ -270,6 +282,7 @@ alias int ImGuiSetCond;           // enum ImGuiSetCond_
 alias int ImGuiInputTextFlags;    // enum ImGuiInputTextFlags_
 alias int ImGuiSelectableFlags;   // enum ImGuiSelectableFlags_
 alias int ImGuiTreeNodeFlags;     // enum ImGuiTreeNodeFlags_
+alias int ImGuiDockSlot;          // enum ImGuiDockSlot_
 alias int function(ImGuiTextEditCallbackData *data) ImGuiTextEditCallback;
 alias void function(ImGuiSizeConstraintCallbackData *data) ImGuiSizeConstraintCallback;
 
